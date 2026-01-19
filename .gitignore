@@ -1,0 +1,78 @@
+# ========== 1. PyTorch/Jupyter 核心忽略项 ==========
+# Jupyter笔记本的检查点目录（自动生成，绝对应该忽略）
+.ipynb_checkpoints/
+# Jupyter运行时临时文件
+*.ipynb_checkpoint
+
+# PyTorch可能生成的模型检查点（.pth, .pt文件），通常很大，除非需要存档，否则忽略
+*.pth
+*.pt
+*.pth.tar
+*.ckpt
+
+# ========== 2. 数据集与训练产物 ==========
+# 你的数据目录（如果数据集是自行下载或生成的，且非小型示例数据）
+/data/
+# 你的训练日志目录
+/logs_conv2d/
+/logs_maxpool/
+/logs_sigmoid/
+
+# 其他可能的实验输出
+/outputs/
+/runs/
+/results/
+/models/  # 如果专门有目录存放训练好的模型
+
+# TensorBoard日志文件（通常很大）
+*.tfevents.*
+events.out.*
+
+# ========== 3. Python通用环境 ==========
+# Python虚拟环境（非常重要！）
+.venv/
+venv/
+env/
+ENV/
+
+# 包安装目录（如果使用 conda，可添加）
+envs/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 包依赖列表（通常用 requirements.txt 管理，但编译后的文件忽略）
+pip-wheel-metadata/
+*.egg
+
+# 配置文件（可能含本地路径）
+*.cfg
+*.conf
+
+# ========== 4. 操作系统与IDE文件 ==========
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE（如果你使用PyCharm等）
+.idea/
+.vscode/  # 如果不想共享VS Code工作区设置
+*.swp
+*.swo
+
+# ========== 5. 大型文件通配符 ==========
+# 通用的大文件或压缩包（临时下载的）
+*.zip
+*.tar.gz
+*.7z
+*.dat
+*.h5  # 大型数据文件格式
